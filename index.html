@@ -1,0 +1,115 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Kuldeep Mahour: software engineer building reliable backend and distributed systems."><title>Kuldeep Mahour | Software Engineer II</title><link rel="icon" href="./assets/favicon.svg"><style>
+:root { --paper:#f7f9fc; --ink:#172840; --muted:#56657a; --accent:#315fcb; --line:#dce3ee; }
+html { scroll-behavior:smooth; scroll-padding-top:32px; background:var(--paper); color:var(--ink); color-scheme:light; }
+body { margin:0; background:var(--paper); color:var(--ink); font-family:Arial,Helvetica,sans-serif; -webkit-font-smoothing:antialiased; }
+* { box-sizing:border-box; }
+a { color:inherit; text-decoration:none; }
+button,summary,a { -webkit-tap-highlight-color:transparent; }
+a:focus-visible,summary:focus-visible,button:focus-visible { outline:3px solid var(--accent); outline-offset:6px; }
+.wrap { width:min(1240px,calc(100% - 96px)); margin-inline:auto; }
+.header { min-height:100px; display:flex; align-items:center; justify-content:space-between; gap:30px; border-bottom:1px solid var(--line); }
+.identity { display:flex; align-items:center; gap:18px; font-size:14px; font-weight:600; }
+.monogram { font-size:34px; font-weight:800; letter-spacing:-3px; }
+.monogram span { color:var(--accent); }
+nav { display:flex; align-items:center; gap:30px; font-size:13px; }
+nav a { padding-block:10px; transition:color .2s; }
+nav a:hover { color:var(--accent); }
+.nav-contact { border-bottom:1px solid var(--ink); }
+.nav-contact span { margin-left:12px; }
+.hero { display:grid; grid-template-columns:1.65fr 1fr; align-items:center; gap:50px; padding-block:78px 70px; }
+.eyebrow,.small-label,.mono,.work-label { font-family:"SFMono-Regular",Consolas,monospace; }
+.eyebrow { font-size:10px; letter-spacing:1.3px; line-height:1.8; font-weight:500; margin:0 0 25px; color:var(--muted); }
+h1,h2,h3,h4,p { margin-top:0; }
+h1 { font-size:clamp(44px,5.4vw,76px); letter-spacing:-4px; line-height:1.07; font-weight:600; margin-bottom:26px; }
+h1 span { color:var(--accent); }
+.hero-description { max-width:440px; font-size:18px; line-height:1.75; color:var(--muted); margin-bottom:32px; }
+.hero-actions { display:flex; align-items:center; flex-wrap:wrap; gap:24px; font-size:13px; }
+.work-cta { background:var(--accent); color:white; padding:18px 22px; display:inline-flex; gap:24px; align-items:center; border-radius:4px; transition:transform .25s,background .25s; }
+.work-cta:hover { transform:translateY(-3px); background:#254ba3; }
+.work-cta:active { transform:translateY(1px); }
+.resume-cta { padding-block:12px; border-bottom:1px solid var(--line); }
+.resume-cta span { display:inline-block; margin-left:9px; transition:transform .2s; }
+.resume-cta:hover span { transform:translate(3px,3px); }
+.hero-aside { position:relative; background:#eef2fa; border:1px solid var(--line); border-radius:8px; overflow:hidden; padding:28px; min-height:390px; display:flex; flex-direction:column; justify-content:flex-end; }
+.big-initials { position:absolute; right:17px; top:-54px; font-size:230px; letter-spacing:-24px; font-weight:800; color:#d9e2f4; transform:rotate(-8deg); user-select:none; transition:transform .7s; }
+.hero-aside:hover .big-initials { transform:rotate(0deg) translateY(6px); }
+.big-initials span { color:#bacdf0; }
+.aside-caption { position:relative; padding-top:155px; }
+.aside-caption>span { display:block; color:var(--muted); font-size:12px; margin-bottom:8px; }
+.aside-caption strong { display:flex; justify-content:space-between; align-items:center; font-size:32px; letter-spacing:-1px; }
+.aside-caption strong span { font-size:24px; }
+.aside-caption p { color:var(--muted); font-size:13px; line-height:1.65; margin-top:14px; }
+.aside-bottom { display:flex; justify-content:space-between; gap:12px; border-top:1px solid #cbd6e9; padding-top:17px; font-size:11px; }
+.metrics { border-top:1px solid var(--line); border-bottom:1px solid var(--line); display:grid; grid-template-columns:repeat(4,1fr); padding-block:30px; }
+.metrics div { border-right:1px solid var(--line); padding-left:36px; }
+.metrics div:first-child { padding-left:0; }
+.metrics div:last-child { border:0; }
+.metrics strong { display:block; font-size:36px; font-weight:500; letter-spacing:-1.5px; }
+.metrics span { display:block; margin-top:8px; font-size:11px; color:var(--muted); }
+.section { padding-block:90px; border-bottom:1px solid var(--line); }
+.section-heading { margin-bottom:36px; }
+h2 { font-size:clamp(30px,3.3vw,43px); letter-spacing:-1.8px; font-weight:500; line-height:1.15; margin-bottom:17px; }
+.section-heading>p:not(.eyebrow) { color:var(--muted); font-size:15px; line-height:1.7; max-width:590px; }
+.work-grid { display:grid; grid-template-columns:1fr 1fr; gap:22px; align-items:start; }
+.work-card { padding:32px; border:1px solid var(--line); border-radius:8px; background:#f0f4fa; }
+.work-card:first-child { grid-column:1 / -1; display:grid; grid-template-columns:1fr 1fr; column-gap:70px; background:#e9effb; }
+.work-card:first-child .work-label { grid-column:1 / -1; }
+.work-card:first-child .work-metric { grid-column:1; grid-row:2 / 5; justify-content:center; }
+.work-label { display:flex; justify-content:space-between; gap:20px; font-size:10px; letter-spacing:.7px; color:var(--muted); margin-bottom:30px; }
+.work-metric { display:flex; flex-direction:column; padding-block:10px 32px; }
+.work-metric strong { font-size:68px; font-weight:500; letter-spacing:-3px; color:var(--accent); line-height:1.1; }
+.work-metric span { font-size:12px; color:var(--muted); margin-top:12px; }
+.work-card h3 { font-size:25px; letter-spacing:-.8px; line-height:1.22; max-width:320px; font-weight:500; margin-bottom:17px; }
+.work-card p { font-size:14px; line-height:1.8; color:var(--muted); }
+.tags { display:flex; flex-wrap:wrap; gap:7px; margin:12px 0 24px; }
+.tags span { padding:5px 8px; border:1px solid #cbd6e7; border-radius:3px; font-size:10px; color:#455775; }
+details { border-top:1px solid #cbd6e7; }
+.work-card:first-child details { grid-column:1 / -1; }
+summary { cursor:pointer; display:flex; align-items:center; justify-content:space-between; padding-top:18px; list-style:none; font-size:12px; }
+summary::-webkit-details-marker { display:none; }
+summary span { font-size:20px; transition:transform .2s; }
+details[open] summary span { transform:rotate(45deg); }
+details p { margin-top:18px; margin-bottom:0; max-width:650px; }
+.timeline article { display:grid; grid-template-columns:1fr 2.3fr; gap:50px; padding-block:35px; border-top:1px solid var(--line); }
+.company h3 { font-size:26px; font-weight:500; letter-spacing:-.7px; margin-bottom:10px; }
+.company>span { font-size:12px; color:var(--muted); }
+.role-heading,.previous-role { display:flex; justify-content:space-between; gap:20px; align-items:baseline; }
+.role-heading h4 { font-size:18px; font-weight:500; margin-bottom:14px; }
+time { font-family:Consolas,monospace; font-size:11px; white-space:nowrap; color:var(--muted); }
+.previous-role { font-size:13px; color:var(--muted); margin:4px 0 24px; }
+.role p,.role li { font-size:14px; line-height:1.85; color:var(--muted); }
+.role ul { padding-left:18px; margin-bottom:0; list-style:disc; }
+.role li { padding-left:4px; margin-bottom:8px; }
+.skill-row { display:grid; grid-template-columns:1fr 2.3fr; gap:50px; padding-block:23px; border-top:1px solid var(--line); }
+.skill-row h3 { font-size:14px; font-weight:500; margin:5px 0 0; }
+.skill-row p { display:flex; flex-wrap:wrap; gap:10px 24px; margin:0; font-size:14px; color:var(--muted); line-height:1.8; }
+.about { display:grid; grid-template-columns:1fr 1fr; gap:80px; }
+.about-intro h2 { font-size:35px; }
+.about-intro>p:not(.eyebrow) { font-size:15px; line-height:1.85; color:var(--muted); margin-block:26px; }
+.linkedin-link { display:inline-flex; align-items:center; gap:20px; color:var(--accent); font-size:13px; padding-block:8px; }
+.linkedin-link:hover { text-decoration:underline; text-underline-offset:5px; }
+.small-label { font-size:10px; color:var(--muted); letter-spacing:1px; }
+.education h3 { font-size:20px; font-weight:500; line-height:1.4; margin-top:16px; margin-bottom:12px; }
+.education p,.education .mono { font-size:12px; color:var(--muted); line-height:1.7; }
+.achievements { border-top:1px solid var(--line); margin-top:25px; padding-top:20px; display:grid; gap:19px; }
+.achievements div { display:flex; align-items:baseline; gap:20px; }
+.achievements strong { min-width:95px; font-size:22px; font-weight:500; letter-spacing:-.5px; }
+.achievements span { font-size:12px; color:var(--muted); }
+.contact { padding-block:95px 80px; }
+.contact h2 { font-size:clamp(40px,5.5vw,70px); letter-spacing:-3px; margin-bottom:30px; }
+.email { display:inline-flex; align-items:center; gap:40px; border-bottom:1px solid var(--accent); padding-bottom:10px; color:var(--accent); font-size:clamp(17px,2.4vw,30px); letter-spacing:-.5px; }
+.email span { transition:transform .25s; }
+.email:hover span { transform:translate(4px,-4px); }
+.contact-links { display:flex; flex-wrap:wrap; gap:30px; margin-top:32px; font-size:12px; color:var(--muted); }
+.contact-links a:hover { color:var(--accent); }
+.footer { display:flex; justify-content:space-between; gap:24px; padding-block:25px; border-top:1px solid var(--line); color:var(--muted); font-size:10px; }
+.skip { position:fixed; z-index:100; top:12px; left:12px; transform:translateY(-150%); padding:12px; background:var(--ink); color:white; }
+.skip:focus { transform:translateY(0); }
+.error-page { max-width:600px; margin:20vh auto; padding:30px; }
+.error-page a,.error-page button { display:inline-block; margin:20px 20px 0 0; color:var(--accent); cursor:pointer; }
+@media(min-width:900px) and (prefers-reduced-motion:no-preference) { .hero-copy { animation:arrive .7s ease-out both; } @keyframes arrive { from { transform:translateY(16px); } to { transform:translateY(0); } } }
+@media(min-width:1500px) { .hero { padding-block:95px; } }
+@media(max-width:1000px) { .wrap { width:calc(100% - 56px); } .hero { gap:28px; } h1 { letter-spacing:-2.5px; } .identity>span:last-child { display:none; } .hero-aside { padding:22px; } .hero-actions { gap:15px; } .work-card:first-child { column-gap:35px; } .about { gap:40px; } .metrics div { padding-left:20px; } }
+@media(max-width:700px) { .wrap { width:calc(100% - 40px); } .header { min-height:84px; gap:12px; } nav { gap:15px; font-size:11px; } nav a[href="#about"] { display:none; } .nav-contact span { margin-left:3px; } .hero { grid-template-columns:1fr; padding-block:45px 38px; gap:36px; } .eyebrow { font-size:9px; letter-spacing:.8px; } h1 { font-size:clamp(39px,9.8vw,65px); letter-spacing:-2.2px; } .hero-description { font-size:16px; } .hero-aside { min-height:250px; padding:23px; } .big-initials { font-size:220px; top:-64px; right:23px; } .aside-caption { padding-top:16px; } .aside-caption strong { justify-content:flex-start; gap:20px; } .aside-caption p { max-width:190px; } .aside-bottom { margin-top:7px; } .metrics { grid-template-columns:1fr 1fr; padding-block:0; } .metrics div { padding:25px 0 25px 20px; } .metrics div:first-child,.metrics div:nth-child(3) { padding-left:0; } .metrics div:nth-child(2) { border:0; } .metrics div:nth-child(-n+2) { border-bottom:1px solid var(--line); } .metrics strong { font-size:31px; } .metrics span { font-size:10px; } .section { padding-block:58px; } .work-grid { grid-template-columns:1fr; } .work-card,.work-card:first-child { display:block; padding:25px; } .work-metric strong { font-size:58px; } .work-card h3 { max-width:100%; } .timeline article { grid-template-columns:1fr; gap:25px; } .role-heading,.previous-role { flex-wrap:wrap; gap:0 15px; } .role-heading { margin-bottom:10px; } .role-heading h4 { margin-bottom:6px; } .skill-row { grid-template-columns:1fr; gap:13px; } .skill-row p { gap:8px 18px; } .about { grid-template-columns:1fr; gap:40px; } .about-intro h2 { font-size:32px; } .contact { padding-block:60px; } .contact h2 { letter-spacing:-2px; } .email { gap:14px; font-size:clamp(16px,4.4vw,24px); } .footer { flex-wrap:wrap; font-size:10px; } .footer>span:nth-child(2) { display:none; } }
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { animation:none!important; transition:none!important; } }
+</style></head><body><a class="skip" href="#main">Skip to content</a><header class="header wrap"><a class="identity" href="#main" aria-label="Kuldeep Mahour home"><span class="monogram">km<span>.</span></span><span>Kuldeep Mahour</span></a><nav aria-label="Main navigation"><a href="#work">Work</a><a href="#experience">Experience</a><a href="#about">About</a><a class="nav-contact" href="#contact">Get in touch <span aria-hidden="true">↗</span></a></nav></header><main id="main"><section class="hero wrap" aria-labelledby="hero-title"><div class="hero-copy"><p class="eyebrow">SOFTWARE ENGINEER II · BACKEND &amp; DISTRIBUTED SYSTEMS</p><h1 id="hero-title">Reliable systems.<br/><span>Real impact.</span></h1><p class="hero-description">I’m Kuldeep. I build the backend systems that keep commerce moving, from checkout to reconciliation.</p><div class="hero-actions"><a class="work-cta" href="#work">Explore my work <span aria-hidden="true">↓</span></a><a class="resume-cta" href="./Kuldeep-Mahour-Resume.pdf" download="">Download resume <span aria-hidden="true">↘</span></a></div></div><aside class="hero-aside" aria-label="Current role and focus"><div class="big-initials" aria-hidden="true">km<span>.</span></div><div class="aside-caption"><span>Currently building at</span><strong>GoKwik <span aria-hidden="true">↗</span></strong><p>Commerce infrastructure.<br/>Millions of transactions. Every day.</p></div><div class="aside-bottom"><span>Gurugram, India</span><a href="https://github.com/Kuldeep-045" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a></div></aside></section><section class="metrics wrap" aria-label="Engineering impact at GoKwik"><div><strong>20M+</strong><span>transactions / day</span></div><div><strong>15K+</strong><span>merchants served</span></div><div><strong>99.9%</strong><span>platform availability</span></div><div><strong>90%</strong><span>fewer recurring incidents</span></div></section><section class="section wrap" id="work"><div class="section-heading"><p class="eyebrow">SELECTED ENGINEERING WORK</p><h2>Built for the real world.</h2><p>Selected contributions at GoKwik, where correctness, scale, and reliability matter.</p></div><div class="work-grid"><article class="work-card reconciliation"><div class="work-label"><span>PAYMENTS / AUTOMATION</span><span aria-hidden="true">01</span></div><div class="work-metric"><strong>12-15M</strong><span>transactions reconciled daily</span></div><h3>Making every transaction accountable.</h3><p>Replaced manual, file-based payment reconciliation with an automated engine across multiple aggregators. Every mismatch becomes a tracked dispute.</p><div class="tags"><span>Payment reconciliation</span><span>Backend services</span><span>Auditability</span></div><details><summary>Engineering context <span aria-hidden="true">+</span></summary><p>The original process lacked visibility and suffered frequent synchronization issues. The reconciliation engine made discrepancies visible and trackable across aggregators.</p></details></article><article class="work-card events"><div class="work-label"><span>DISTRIBUTED SYSTEMS</span><span aria-hidden="true">02</span></div><div class="work-metric"><strong>30%</strong><span>reduction in p99 API latency</span></div><h3>Less waiting. More headroom.</h3><p>Migrated core services to an event-driven architecture with Apache Kafka, reducing tail latency and improving horizontal scalability.</p><div class="tags"><span>Apache Kafka</span><span>Event-driven architecture</span><span>Scalability</span></div><details><summary>Engineering context <span aria-hidden="true">+</span></summary><p>Contributed to the evolution of a commerce checkout platform processing more than 20 million transactions daily, with reliability and auditability as core requirements.</p></details></article><article class="work-card reliability"><div class="work-label"><span>LENDING / RELIABILITY</span><span aria-hidden="true">03</span></div><div class="work-metric"><strong>99.9%</strong><span>platform availability</span></div><h3>Payment flows that hold up.</h3><p>Contributed to BNPL and Pay-Later flows, including loan state transitions, idempotent lender callbacks, and reconciliation.</p><div class="tags"><span>State machines</span><span>Idempotency</span><span>REST APIs</span></div><details><summary>Engineering context <span aria-hidden="true">+</span></summary><p>Implemented parts of agreement, refund and EMI callback handling with an external lender. Broader platform performance and resilience improvements raised availability and increased payment success rate by 20%.</p></details></article></div></section><section class="section experience wrap" id="experience"><div class="section-heading"><h2>Experience that compounds.</h2><p>From enterprise integrations to high-volume commerce systems.</p></div><div class="timeline"><article><div class="company"><h3>GoKwik</h3><span>Gurugram, India</span></div><div class="role"><div class="role-heading"><h4>Software Engineer II</h4><time>Apr 2026 - Present</time></div><div class="previous-role"><span>Previously Software Engineer</span><time>Mar 2024 - Apr 2026</time></div><p>Building distributed backend services in Golang and Node.js for a multi-tenant payments and commerce checkout platform.</p><ul><li>Owned on-call for 15 services, including monitoring, logging, root cause analysis, and preventive fixes.</li><li>Cut mean-time-to-root-cause by 30% and recurring incidents by 90%.</li><li>Used Claude and Codex in development, reviews, and refactoring to accelerate routine delivery.</li></ul></div></article><article><div class="company"><h3>Celigo</h3><span>Gurugram, India</span></div><div class="role"><div class="role-heading"><h4>Software Engineer</h4><time>Jan 2023 - Dec 2023</time></div><p>Built backend services and strictly typed REST APIs for enterprise systems handling large-scale data workflows.</p><ul><li>Developed internal automation tools to reduce manual operational effort.</li><li>Worked through code reviews, testing, and an Agile development lifecycle.</li></ul></div></article></div></section><section class="section skills-section wrap" id="skills"><div class="section-heading"><h2>The tools behind the work.</h2></div><div class="skills-index"><div class="skill-row"><h3>Languages</h3><p><span>Golang</span><span>JavaScript</span><span>TypeScript</span><span>C++</span><span>SQL</span></p></div><div class="skill-row"><h3>Backend &amp; systems</h3><p><span>REST APIs</span><span>Microservices</span><span>Apache Kafka</span><span>Event-driven architecture</span><span>System design</span></p></div><div class="skill-row"><h3>Data</h3><p><span>PostgreSQL</span><span>MongoDB</span><span>Redis</span><span>Trino</span><span>ClickHouse</span></p></div><div class="skill-row"><h3>Infrastructure &amp; practice</h3><p><span>AWS</span><span>Docker</span><span>Kubernetes</span><span>CI/CD</span><span>Git</span><span>Monitoring &amp; on-call</span></p></div></div></section><section class="section about wrap" id="about"><div class="about-intro"><p class="eyebrow">A LITTLE MORE ABOUT ME</p><h2>Curious by default.<br/>Grounded in fundamentals.</h2><p>My work spans APIs, distributed systems, and the operational details that keep them running. I care about software that stays understandable as it scales.</p><a class="linkedin-link" href="https://linkedin.com/in/kuldeep-mahour" target="_blank" rel="noreferrer">Connect on LinkedIn <span aria-hidden="true">↗</span></a></div><div class="credentials"><div class="education"><span class="small-label">EDUCATION</span><h3>National Institute of Technology,<br/>Jamshedpur</h3><p>B.Tech, Electronics and Communication Engineering</p><span class="mono">2019 - 2023</span></div><div class="achievements"><div><strong>1500+</strong><span>DSA problems solved</span></div><div><strong>5-star</strong><span>HackerRank · Problem Solving</span></div><div><strong>3rd place</strong><span>Hack-de-Science Hackathon</span></div></div></div></section><section class="contact wrap" id="contact"><p class="eyebrow">LET’S BUILD SOMETHING THAT LASTS</p><h2>Good systems start<br/>with a conversation.</h2><a class="email" href="mailto:kuldeepmahour6@gmail.com">kuldeepmahour6@gmail.com <span aria-hidden="true">↗</span></a><div class="contact-links"><a href="https://github.com/Kuldeep-045" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a><a href="https://linkedin.com/in/kuldeep-mahour" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a><a href="./Kuldeep-Mahour-Resume.pdf" download="">Download resume <span aria-hidden="true">↘</span></a></div></section></main><footer class="footer wrap"><span>© 2026 Kuldeep Mahour</span><span>Thoughtfully built. Reliably engineered.</span><a href="#main">Back to top ↑</a></footer></body></html>
